@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Float Example</title>
+
+  <style>
+    #img-and-text-example,
+    #two-images-and-no-clear-example,
+    #two-images-and-a-clearing-hr-example,
+    #broken-float-experience-example,
+    #with-overflow-wrapper-example,
+    #clearfix-example { overflow: hidden; }
+
+
+    #img-and-text-example  img {
+      float:left;
+    }
+
+    #two-images-and-no-clear-example .first { float: left; }
+
+    #broken-float-experience-example .first-wrapper {
+      border: 1px solid red;
+      min-height: 1rem;
+    }
+
+    #broken-float-experience-example .first-wrapper .first {
+      float: left;
+    }
+
+    #two-images-and-a-clearing-hr-example .first { float: left; }
+    #two-images-and-a-clearing-hr-example hr { clear: both; }
+
+    #with-overflow-wrapper-example .gallery img { float: left; }
+    #with-overflow-wrapper-example .gallery { overflow: hidden; border: 1px solid blue; }
+
+    #clearfix-example .gallery img { float: left; }
+    #clearfix-example .gallery:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+
+<div id="no-float">
+  <h3>Image and Text</h3>
+  <img src="images/duck.png" alt="Ente">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ipsa nesciunt, aliquam, molestias reiciendis necessitatibus ea doloremque eveniet quis, esse voluptatem quidem expedita velit! Ea modi, esse nisi nulla id.</p>
+</div>
+
+<hr>
+
+<div id="img-and-text-example">
+  <h3>Image (float) and Text</h3>
+  <img src="images/duck.png" alt="Ente">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ipsa nesciunt, aliquam, molestias reiciendis necessitatibus ea doloremque eveniet quis, esse voluptatem quidem expedita velit! Ea modi, esse nisi nulla id.</p>
+</div>
+
+<hr>
+
+<div id="two-images-and-no-clear-example">
+  <h3>2 Images, first has float but no clear</h3>
+  <p>We can see now, that image 2 lies as expected next to 1</p>
+  <img class="first" src="images/duck.png" alt="Ente">
+  <img class="second" src="images/duck.png" alt="Ente">
+</div>
+
+<hr>
+
+<div id="broken-float-experience-example">
+  <h3>float with broken boxes</h3>
+  <div class="first-wrapper">
+    <img class="first" src="images/duck.png" alt="Ente">
+  </div>
+  <img class="second" src="images/duck.png" alt="Ente">
+</div>
+
+
+<hr>
+
+<div id="two-images-and-a-clearing-hr-example">
+  <h3>2 Images and a clearing element</h3>
+  <img class="first" src="images/duck.png" alt="Ente">
+  <hr>
+  <img class="second" src="images/duck.png" alt="Ente">
+</div>
+
+<hr>
+
+<div id="with-overflow-wrapper-example">
+  <h3>overflow to the Rescue</h3>
+  <div class="gallery">
+    <img src="images/duck.png" alt="Ente">
+    <img src="images/duck.png" alt="Ente">
+    <img src="images/duck.png" alt="Ente">
+  </div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic perferendis, adipisci, eligendi nihil dolores voluptatum illum expedita, minus beatae suscipit ex fugit obcaecati optio, voluptates eum ab cumque maiores fuga.</p>
+</div>
+
+<hr>
+
+<div id="clearfix-example">
+  <h3>clear fix</h3>
+  <div class="gallery">
+    <img src="images/duck.png" alt="Ente">
+    <img src="images/duck.png" alt="Ente">
+    <img src="images/duck.png" alt="Ente">
+  </div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic perferendis, adipisci, eligendi nihil dolores voluptatum illum expedita, minus beatae suscipit ex fugit obcaecati optio, voluptates eum ab cumque maiores fuga.</p>
+</div>
+
+
+</body>
+</html>
